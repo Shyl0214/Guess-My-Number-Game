@@ -26,7 +26,6 @@ console.log(document.querySelector('.guess').value);
 // document.querySelector('.message').textContent = 'Hello World'
 
 let secretNumner = Math.floor(Math.random() * 20 + 1);
-// document.querySelector('.number').textContent = secretNumner;
 let score = 20;
 let highscore = 0;
 
@@ -43,6 +42,7 @@ document.querySelector('.check').addEventListener('click', function () {
 
     if (score > highscore) {
       highscore = score;
+      document.querySelector('.highscore').textContent = score;
     }
   } else if (guess > secretNumner) {
     if (score > 1) {
